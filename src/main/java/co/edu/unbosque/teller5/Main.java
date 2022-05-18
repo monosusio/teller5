@@ -10,7 +10,7 @@ public class Main {
 
     // Database credentials
     static final String USER = "postgres";
-    static final String PASS = "PajaGrupal";
+    static final String PASS = "Santuario11";
 
     public static void main(String[] args) {
 

@@ -32,16 +32,17 @@ public class UsersService {
             // Reading data from result set row by row
             while (rs.next()) {
                 // Extracting row values by column name
+                int user_id = rs.getInt("user_id");
                 String username = rs.getString("username");
                 String password = rs.getString("password");
                 String role = rs.getString("role");
 
                 // Creating a new UserApp class instance and adding it to the array list
-                usuarioApps.add(new Usuario(username, password, role));
+                usuarioApps.add(new Usuario(user_id, username, password, role));
             }
 
             // Printing results
-            System.out.println("Username | Password | Role");
+            System.out.println("ID | Username | Password | Role");
             for (Usuario usuario : usuarioApps) {
                 System.out.println(usuario.toString());
             }

@@ -5,6 +5,9 @@ import com.opencsv.bean.CsvBindByName;
 public class Usuario {
 
     @CsvBindByName
+    private Integer user_id;
+
+    @CsvBindByName
     private String username;
 
     @CsvBindByName
@@ -16,7 +19,8 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String username, String password, String role) {
+    public Usuario(Integer user_id, String username, String password, String role) {
+        this.user_id = user_id;
         this.username = username;
         this.password = password;
         this.role = role;
@@ -44,6 +48,14 @@ public class Usuario {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public Integer getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 
     @Override
