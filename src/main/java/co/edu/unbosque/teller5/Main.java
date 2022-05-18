@@ -1,5 +1,7 @@
 package co.edu.unbosque.teller5;
 
+import co.edu.unbosque.teller5.services.UsersService;
+
 import java.sql.*;
 
 public class Main {
@@ -26,8 +28,8 @@ public class Main {
             System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
-            //UsersService usersService = new UsersService(conn);
-            //usersService.listUsers();
+            UsersService usersService = new UsersService(conn);
+            usersService.listUsers();
 
             //PetsService petsService = new PetsService(conn);
             //petsService.countBySpecies("dog");

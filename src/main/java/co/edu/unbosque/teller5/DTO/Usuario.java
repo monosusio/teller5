@@ -4,20 +4,10 @@ import com.opencsv.bean.CsvBindByName;
 
 public class Usuario {
 
-    @CsvBindByName
     private Integer user_id;
-
-    @CsvBindByName
     private String username;
-
-    @CsvBindByName
     private String password;
-
-    @CsvBindByName
     private String role;
-
-    public Usuario() {
-    }
 
     public Usuario(Integer user_id, String username, String password, String role) {
         this.user_id = user_id;

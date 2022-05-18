@@ -11,9 +11,7 @@ public class UsersService {
     // Objects for handling connection
     private Connection conn;
 
-    public UsersService() {
-        this.conn = conn;
-    }
+    public UsersService(Connection conn) {this.conn = conn;}
 
     public void listUsers() {
         // Object for handling SQL statement
